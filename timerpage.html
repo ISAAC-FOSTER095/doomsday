@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Avengers: Doomsday</title>
+</head>
+<body>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="box">
+    <h1>COUNTDOWN TO AVENGERS: DOOMSDAY</h1>
+    
+  </div>
+<style>
+  body {
+    font-family:'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+    background-color: #0c0c0c;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-HbA8Tp04eoZVS4gQHSPe1N3rf_fzvc5zaf5LvKUgZD60mATWUx9QKg16&s=10');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    color: #fff;
+  }
+
+  * {
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #demo {
+    font-size: 20px;
+    color: #fff;
+  }
+</style>
+
+<p id="demo"></p>
+
+<script>
+var countDownDate = new Date("Dec 17, 2026 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+ 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Doomsday is now on the movie theaters!";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
+  
+  
+
+
+
